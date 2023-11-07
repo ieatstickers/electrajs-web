@@ -4,7 +4,8 @@
     "module": "ES6",
     "moduleResolution": "node",
     "outDir": "./dist",
-    "noImplicitAny": true
+    "noImplicitAny": true,
+    "esModuleInterop": true
   },
   "exclude": [
     "node_modules",
