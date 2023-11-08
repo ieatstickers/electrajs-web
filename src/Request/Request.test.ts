@@ -26,6 +26,8 @@ class TestRequestProvider implements RequestInterface
   getProtocol = jest.fn().mockReturnValue("http");
   getHeader = jest.fn().mockReturnValue("header");
   isSecure = jest.fn().mockReturnValue(false);
+  get = jest.fn().mockReturnValue("value");
+  set = jest.fn(() => this);
 }
 
 describe("Request", () => {
@@ -163,6 +165,19 @@ describe("Request", () => {
     
     it("returns what the provider returns", () => {
       expect(request.isSecure()).toBe(provider.isSecure());
+    });
+  });
+  
+  describe("get", () => {
+    it("calls the provider's get method with the correct parameters", () => {
+      const name = "key";
+      request.get(name);
+      expect(provider.get).toHaveBeenCalledWith(name);
+      expect(provider.get).toHaveBeenCalledTimes(1);
+    });
+    
+    it("returns what the provider returns", () => {
+      expect(request.get("key")).toBe(provider.get("key"));
     });
   });
   

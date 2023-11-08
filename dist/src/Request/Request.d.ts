@@ -33,4 +33,6 @@ export declare class Request implements RequestInterface {
     getProtocol(): string;
     getHeader(name: string): string;
     isSecure(): boolean;
+    get(key: string): any;
+    set(key: string, value: any): this;
 }

@@ -36,4 +36,8 @@ export interface RequestInterface
   getHeader(name: string): string;
   
   isSecure(): boolean;
+  
+  get(name: string): any;
+  
+  set(name: string, value: any): this;
 }

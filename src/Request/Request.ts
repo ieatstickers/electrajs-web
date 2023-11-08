@@ -77,4 +77,15 @@ export class Request implements RequestInterface
   {
     return this.provider.isSecure();
   }
+  
+  public get(key: string): any
+  {
+    return this.provider.get(key);
+  }
+  
+  public set(key: string, value: any): this
+  {
+    this.provider.set(key, value);
+    return this;
+  }
 }
