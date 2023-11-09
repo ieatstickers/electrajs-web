@@ -1,5 +1,5 @@
-import { ParsedQueryParams } from "../Type/ParsedQueryParams";
-import { ParsedQueryParam } from "../Type/ParsedQueryParam";
+import { ParsedQueryParams } from "./Type/ParsedQueryParams";
+import { ParsedQueryParam } from "./Type/ParsedQueryParam";
 import { RequestInterface } from "./RequestInterface";
 
 export class Request implements RequestInterface

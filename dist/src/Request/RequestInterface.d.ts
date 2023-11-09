@@ -1,5 +1,5 @@
-import { ParsedQueryParams } from "../Type/ParsedQueryParams";
-import { ParsedQueryParam } from "../Type/ParsedQueryParam";
+import { ParsedQueryParams } from "./Type/ParsedQueryParams";
+import { ParsedQueryParam } from "./Type/ParsedQueryParam";
 export interface RequestInterface {
     cookies(): {
         getAll(): {
