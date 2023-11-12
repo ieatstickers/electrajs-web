@@ -27,7 +27,7 @@ export interface ResponseInterface
       headers?: { [key: string]: string };
       cacheControl?: boolean; // default: true
     }
-  ): void;
+  ): Promise<void>;
   
   end(): void;
   

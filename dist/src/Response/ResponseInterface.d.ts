@@ -18,7 +18,7 @@ export interface ResponseInterface {
             [key: string]: string;
         };
         cacheControl?: boolean;
-    }): void;
+    }): Promise<void>;
     end(): void;
     json(data: any): void;
     redirect(url: string): void;
