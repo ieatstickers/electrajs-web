@@ -21,7 +21,7 @@ export interface RequestInterface
     has(name: string): boolean;
   };
   
-  getBody(): { [key: string]: string | number | boolean };
+  getBody(): any;
   
   getHost(): string;
   
