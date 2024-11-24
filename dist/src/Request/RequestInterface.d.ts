@@ -16,9 +16,7 @@ export interface RequestInterface {
         get(name: string): ParsedQueryParam;
         has(name: string): boolean;
     };
-    getBody(): {
-        [key: string]: string | number | boolean;
-    };
+    getBody(): any;
     getHost(): string;
     getHostname(): string;
     getIp(): string | null;
